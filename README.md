@@ -6,6 +6,8 @@ The MPU6050 combines a 3-axis gyroscope and a 3-axis accelerometer on the same s
 
 Original Library
 ----------------
-
 https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
 
+I2CDevlib Website Link
+----------------------
+http://www.i2cdevlib.com/devices/mpu6050#source
