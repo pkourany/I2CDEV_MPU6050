@@ -1,7 +1,11 @@
 # I2CDEV_MPU6050
-I2CDEV MPU6050 Arduino Library adapted for Spark Core
+I2CDEV MPU-6050 6-axis accelerometer/gyroscope Arduino Library adapted for Spark Core
+by Paul Kourany, April 2015
 
-MPU6050Spark
-============
+The MPU6050 combines a 3-axis gyroscope and a 3-axis accelerometer on the same silicon die together with an onboard Digital Motion Processor(DMP) which processes complex 6-axis MotionFusion algorithms.
 
-MPU6050 library for Spark adapted from Sparkfun Arudino library by Paul Kourany, April 2014
+Original Library
+----------------
+
+https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
+
