@@ -1,0 +1,7 @@
+{
+	"name": "I2CDEV_MPU6050",
+	"author": "Paul Kourany / Jeff Rowberg / James Hagerman",
+	"version": "1.0.1",
+	"license": "MIT license",
+	"description": "MPU6050 IMU library"
+}
