@@ -11,3 +11,8 @@ https://github.com/jrowberg/i2cdevlib/tree/master/Arduino/MPU6050
 I2CDevlib Website Link
 ----------------------
 http://www.i2cdevlib.com/devices/mpu6050#source
+
+
+Installing in the Spark.io Web IDE
+----------------------------------
+You should be able to import this library using the web based IDE.

@@ -1,5 +1,5 @@
 {
-	"name": "I2CDEV_MPU6050",
+	"name": "MPU6050",
 	"author": "Paul Kourany / Jeff Rowberg / James Hagerman",
 	"version": "1.0.1",
 	"license": "MIT license",
