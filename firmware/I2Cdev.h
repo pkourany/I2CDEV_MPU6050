@@ -75,7 +75,7 @@ THE SOFTWARE.
 #endif
 
 #ifdef ARDUINO
-#warnings ARDUINO !!!
+//#warnings ARDUINO !!!
     #if ARDUINO < 100
         #include "WProgram.h"
     #else
