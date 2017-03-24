@@ -70,8 +70,8 @@ THE SOFTWARE.
 // -----------------------------------------------------------------------------
 //#define I2CDEV_SERIAL_DEBUG
 
-#if defined (SPARK)
-	#include "application.h"
+#if defined (PARTICLE)
+	#include "Particle.h"
 #endif
 
 #ifdef ARDUINO

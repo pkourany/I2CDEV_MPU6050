@@ -43,14 +43,14 @@ THE SOFTWARE.
 
 // I2Cdev and MPU6050 must be installed as libraries, or else the .cpp/.h files
 // for both classes must be in the include path of your project
-#include "MPU6050/I2Cdev.h"
+#include <I2Cdev.h>
 
-#include "MPU6050/MPU6050_6Axis_MotionApps20.h"
+#include <MPU6050_6Axis_MotionApps20.h>
 //#include "MPU6050.h" // not necessary if using MotionApps include file
 
 // Arduino Wire library is required if I2Cdev I2CDEV_ARDUINO_WIRE implementation
 // is used in I2Cdev.h
-#if (I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE) && !defined (SPARK)
+#if (I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE) && !defined (PARTICLE)
     #include "Wire.h"
 #endif
 
@@ -118,8 +118,8 @@ MPU6050 mpu;
 
 
 
-#if defined (SPARK)
-#define LED_PIN D7 // (Spark Core is D7)
+#if defined (PARTICLE)
+#define LED_PIN D7 // (Particle is D7)
 #else
 #define LED_PIN 13 // (Arduino is 13, Teensy is 11, Teensy++ is 6)
 #endif
@@ -166,7 +166,7 @@ void dmpDataReady() {
 void setup() {
     // join I2C bus (I2Cdev library doesn't do this automatically)
     #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
-		#if defined (SPARK)
+		#if defined (PARTICLE)
 			Wire.setSpeed(CLOCK_SPEED_400KHZ);
 			Wire.begin();
 		#else
@@ -181,7 +181,7 @@ void setup() {
     // (115200 chosen because it is required for Teapot Demo output, but it's
     // really up to you depending on your project)
     Serial.begin(115200);
-#if !defined (SPARK)
+#if !defined (PARTICLE)
     while (!Serial); // wait for Leonardo enumeration, others continue immediately
 #endif
 
@@ -223,7 +223,7 @@ void setup() {
 
         // enable Arduino interrupt detection
         Serial.println(F("Enabling interrupt detection (Arduino external interrupt 0)..."));
-	#if defined (SPARK)
+	#if defined (PARTICLE)
         attachInterrupt(D2, dmpDataReady, RISING);
 	#else
         attachInterrupt(0, dmpDataReady, RISING);

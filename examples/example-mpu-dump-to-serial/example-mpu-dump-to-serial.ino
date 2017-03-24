@@ -2,8 +2,8 @@
 // This code is a heavily modified version of the MPU6050_raw.ino example found elsewhere in this repo.
 // This code has been tested against the MPU-9150 breakout board from Sparkfun.
 
-// This #include statement was automatically added by the Spark IDE.
-#include "MPU6050/MPU6050.h"
+// This #include statement was automatically added by the Particle IDE.
+#include "MPU6050.h"
 
 int ledPin = D7;
 

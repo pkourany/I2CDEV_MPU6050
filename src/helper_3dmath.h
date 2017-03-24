@@ -32,7 +32,7 @@ THE SOFTWARE.
 #ifndef _HELPER_3DMATH_H_
 #define _HELPER_3DMATH_H_
 
-#if defined (SPARK)
+#if defined (PARTICLE)
 	#include <math.h>
 #endif
 
