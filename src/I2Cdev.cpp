@@ -282,7 +282,9 @@ int8_t I2Cdev::readBytes(uint8_t devAddr, uint8_t regAddr, uint8_t length, uint8
                 useWire->beginTransmission(devAddr);
                 useWire->write(regAddr);
                 useWire->endTransmission();
+                #if not defined(ESP32)
                 useWire->beginTransmission(devAddr);
+                #endif
                 useWire->requestFrom((uint8_t)devAddr, (uint8_t)min((int)length - k, I2CDEVLIB_WIRE_BUFFER_LENGTH));
         
                 for (; useWire->available() && (timeout == 0 || millis() - t1 < timeout); count++) {
